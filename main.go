@@ -5,6 +5,7 @@ import (
 	_ "github.com/libgox/buffer"
 	_ "github.com/libgox/flyway"
 	_ "github.com/libgox/gocollections/listx"
+	_ "github.com/libgox/retry"
 	_ "github.com/libgox/spring-cloud-go"
 	_ "github.com/libgox/unicodex/letter"
 	_ "github.com/protocol-laboratory/opcua-go/opcua"
