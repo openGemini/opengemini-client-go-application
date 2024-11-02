@@ -1,16 +1,27 @@
 package boot
 
 import (
+	"log/slog"
+	"os"
+
 	"github.com/libgox/envx"
-	"golang.org/x/exp/slog"
+	"github.com/libgox/slogsimple"
 )
 
-type ClientApplication struct {
+type Application struct {
+	logger *slog.Logger
 }
 
-func NewClientApplication() *ClientApplication {
+func NewTestClientApplication() *Application {
 	logger := slog.Default()
 	envx.GetStrOr("POD_NAME", "defaultName")
 	logger.Info("Starting client application")
-	return &ClientApplication{}
+	return &Application{}
+}
+
+func (a *Application) Boot() {
+	a.logger = slog.New(slogsimple.NewHandler(&slogsimple.Config{
+		Output:   os.Stdout,
+		MinLevel: slog.LevelInfo,
+	}))
 }
