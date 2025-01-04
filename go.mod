@@ -1,15 +1,17 @@
 module github.com/opengemini/opengemini-client-go-application
 
-go 1.22
+go 1.22.0
+
+toolchain go1.22.2
 
 require (
 	github.com/libgox/addr v0.2.0
 	github.com/libgox/asciitable v0.0.0-20241225014119-5902387d688c
 	github.com/libgox/buffer v0.1.0
 	github.com/libgox/envx v0.2.0
-	github.com/libgox/flyway v0.2.0
+	github.com/libgox/flyway v0.2.1
 	github.com/libgox/gocollections v0.1.1
-	github.com/libgox/must v1.0.0
+	github.com/libgox/must v1.1.0
 	github.com/libgox/properties v0.1.0
 	github.com/libgox/retry v0.1.0
 	github.com/libgox/slogsimple v0.3.0
